@@ -2,30 +2,32 @@
 <%
     request.setCharacterEncoding("UTF-8");
 
-    String email = request.getParameter("email");
-    String password = request.getParameter("password");
-    String address = request.getParameter("address");
-    String address2 = request.getParameter("address2");
-    String city = request.getParameter("city");
-    String state = request.getParameter("state");
-    String zip = request.getParameter("zip");
+    String Name = request.getParameter("name");
+    String Gender = request.getParameter("gender");
+    String Email = request.getParameter("email");
+    String Password = request.getParameter("password");
+    String SchoolYear = request.getParameter("year");
+    String FavAnimal = request.getParameter("animal");
+    String Date = request.getParameter("date");
     String isCheck = request.getParameter("isCheck");
     String isCheckMSG = "";
-    if(isCheck.equals("1")) isCheckMSG = "체크됨!";
+    if(isCheck.equals("1")) isCheckMSG = "Checked!";
 %>
 
 <html>
-<head></head>
+<head>
+    <meta charset="UTF-8">
+</head>
 <body>
 <h3>입력하신 데이터는 다음과 같습니다.</h3>
 <div>
-    Email : <%=email%><br>
-    Password : <%=password%><br>
-    Address 1 : <%=address%><br>
-    Address 2 : <%=address2%><br>
-    city : <%=city%><br>
-    state : <%=state%><br>
-    zip : <%=zip%><br>
+    Name : <%=Name%><br>
+    Gender : <%=Gender%><br>
+    Email : <%=Email%><br>
+    Password : <%=Password%><br>
+    School Year : <%=SchoolYear%><br>
+    Favorite Animal : <%=FavAnimal%><br>
+    Submit Date : <%=Date%>
     isCheck : <%=isCheckMSG%><br>
 </div>
 </body>
