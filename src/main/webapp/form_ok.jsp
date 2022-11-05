@@ -10,8 +10,8 @@
     String FavAnimal = request.getParameter("animal");
     String Date = request.getParameter("date");
     String isCheck = request.getParameter("isCheck");
-    String isCheckMSG = "";
-    if(isCheck.equals("1")) isCheckMSG = "Checked!";
+    String isCheckMSG = "Not Checked...";
+    if("1".equals(isCheck)) isCheckMSG = "Checked!";
 %>
 
 <html>
@@ -27,7 +27,7 @@
     Password : <%=Password%><br>
     School Year : <%=SchoolYear%><br>
     Favorite Animal : <%=FavAnimal%><br>
-    Submit Date : <%=Date%>
+    Submit Date : <%=Date%><br>
     isCheck : <%=isCheckMSG%><br>
 </div>
 </body>
