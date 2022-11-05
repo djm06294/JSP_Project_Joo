@@ -1,13 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <style>
+        .checkboxes input{
+            margin: 0 5px 0 30px;
+        }
+        .dropboxes input{
+            margin: 0 5px 0 30px;
+        }
+    </style>
 </head>
-<form action="form_ok.jsp" method="post">
-    
-</form>
 <body>
+<div class="container">
+    <div style="...">
+        <h1>Add User</h1>
+    </div>
+    <form class="row g-3" action="form_ok.jsp" method="post">
+        <div class="col-md-6">
+            <label for="inputName" class="form-label">Name</label>
+            <input type="name" class="form-control" id="inputName" name="name" placeholder="KimHandong">
+        </div>
+        <div class="col-md-6" class="checkboxes">
+            <label for="urgender">Gender:</label><br>
+            <input type="radio" id="urgender" value="M" name="gender"> Male
+            <input type="radio" id="mygender" value="F" name="gender"> Female
+        </div>
+        <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">Email</label>
+            <input type="email" class="form-control" id="inputEmail4" name="email">
+        </div>
+        <div class="col-md-6">
+            <label for="inputPassword4" class="form-label">Password</label>
+            <input type="password" class="form-control" id="inputPassword4" name="password">
+        </div>
+        <div class="col-12" class="checkboxes">
+            <label for="schoolYear">School Year:</label><br>
+            <div>
+                <input type="checkbox" id="schoolYear" name="year" value="1"> Freshman
+                <input type="checkbox" id="schoolYear2" name="year" value="2"> Sophomore
+                <input type="checkbox" id="schoolYear3" name="year" value="3"> Junior
+                <input type="checkbox" id="schoolYear4" name="year" value="4"> Senior
+                <input type="checkbox" id="schoolYear0" name="year" value="4"> Not in school
+            </div>
+        </div>
+
+        <div class="col-4" class="dropboxes">
+            <label for="animals">Favorite Animal:</label>
+            <select id="animals" name="animal" required>
+                <optgroup label="Dogs">
+                    <option value="Retriever">Retriever</option>
+                    <option value="Jindo">Jindo</option>
+                    <option value="BorderCollie">BorderCollie</option>
+                </optgroup>
+                <optgroup label="Cats">
+                    <option value="AmericanShorthair">AmericanShorthair</option>
+                    <option value="Munchkin">Munchkin</option>
+                    <option value="NorwegianForest">NorwegianForest</option>
+                </optgroup>
+                <optgroup label="Else">
+                    <option value="Else">Else</option>
+                    <option value="NotFanOfAnimals">Not Fan Of Animals</option>
+                </optgroup>
+            </select>
+        </div>
+        <div class="col-md-6">
+            <label for="date">What Date is today?</label>
+            <input type="date" id="date" name="date" min="2022-01-01" max="2023-12-31">
+        </div>
+
+        <div class="col-12">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck" name="isCheck" value="1">
+                <label class="form-check-label" for="gridCheck">
+                    Check me out
+                </label>
+            </div>
+        </div>
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary">Sign in</button>
+        </div>
+    </form>
+</div>
 
 </body>
 </html>

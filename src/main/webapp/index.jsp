@@ -8,7 +8,7 @@
 <h1><%= "Hello World!" %>
 </h1>
 <br/>
-<a href="hello-servlet">Hello Servlet</a>
-<a href="hello-form">Hello form.html</a>
+<a href="hello-servlet">Hello Servlet</a> <br>
+<a href="https://heroku-jsp-joo.herokuapp.com/form.html">Hello form.html</a>
 </body>
 </html>
